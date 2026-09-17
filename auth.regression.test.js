@@ -2,7 +2,7 @@ const { login } = require('./auth');
 
 describe('login regression tests', () => {
   test('throws when the password is incorrect', () => {
-    expect(() => login('admin', 'wrong-password')).toThrow(
+    expect(() => login('admin', 'wrongpassword')).toThrow(
       'Invalid username or password',
     );
   });
