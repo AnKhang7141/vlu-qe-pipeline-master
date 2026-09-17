@@ -22,11 +22,11 @@ function login(username, password) {
     throw new Error('Account is locked');
   }
 
-  if (/[^\w]/.test(password)) {
+  if (/[^\w]/.test(password)) {
     throw new Error('Password contains invalid special characters');
   }
 
-  if (username !== 'admin' || password !== '9999') {
+  if (username !== 'admin' || password !== '123') {
     throw new Error('Invalid username or password');
   }
 
