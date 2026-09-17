@@ -17,6 +17,7 @@ function login(username, password) {
     throw new Error('Password is required');
   }
 
+  // Check locked accounts before validating credentials to fail fast.
   if (LOCKED_USERNAMES.has(username.trim().toLowerCase())) {
     throw new Error('Account is locked');
   }
